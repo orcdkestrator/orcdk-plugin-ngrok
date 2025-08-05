@@ -7,6 +7,6 @@ describe('NgrokPlugin', () => {
 
   it('should have correct name', () => {
     const plugin = new NgrokPlugin();
-    expect(plugin.name).toBe('ngrok');
+    expect(plugin.name).toBe('@orcdkestrator/orcdk-plugin-ngrok');
   });
 });

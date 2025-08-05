@@ -4,17 +4,13 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { Plugin, PluginConfig, OrcdkConfig, EventBus, EventTypes, OrcdkEvent } from '@orcdkestrator/core';
 
-// Read version from package.json
-const packageJsonPath = path.join(__dirname, '../..', 'package.json');
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
-
 /**
  * Ngrok plugin for local development tunnel management
  * Migrated from DeployManager LocalSetupManager
  */
 export class NgrokPlugin implements Plugin {
-  public readonly name = '@orcdkestrator/ngrok';
-  public readonly version = packageJson.version;
+  public readonly name = '@orcdkestrator/orcdk-plugin-ngrok';
+  public readonly version = '1.0.0';
   
   private config: PluginConfig | null = null;
   private orcdkConfig: OrcdkConfig | null = null;
